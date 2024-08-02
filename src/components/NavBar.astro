@@ -1,0 +1,46 @@
+<nav class="bg-white fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#" class="text-xl font-bold text-gray-800 flex items-center">
+                <img src="/vial_icono.ico" alt="Logo de Vial Solutions" class="h-12 mr-2" />
+                <span class="text-[#05A7A7]">Vial-Solutions</span>
+            </a>
+        </div>
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                <i class="fas fa-bars h-6 w-6"></i>
+            </button>
+        </div>
+        <div id="menu" class="hidden lg:flex items-center space-x-10 font-bold">
+            <a href="#" class={` hover:text-[#05A7A7] transition-colors duration-300`}>Acerca de</a>
+            <a href="#" class={` hover:text-[#05A7A7] transition-colors duration-300`}>Contactos</a>
+            <a href="#" class="px-4 py-2 rounded border-2 border-[#05A7A7] text-white bg-[#05A7A7] hover:bg-white hover:text-black hover:border-[#05A7A7] transition-colors duration-300">Descargas</a>
+        </div>
+    </div>
+    <div id="mobile-menu-container" class="lg:hidden fixed top-0 left-0 w-full h-full bg-white hidden z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-800 flex items-center">
+                <img src="/vial_icono.ico" alt="Logo" class="h-12 mr-2" />
+                <span class="text-[#05A7A7]">Vial-Solutions</span>
+            </a>
+            <button id="menu-close" class="text-gray-800 focus:outline-none">
+                <i class="fas fa-times h-6 w-6"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="flex flex-col justify-center items-center space-y-6 text-center text-lg font-bold mt-4">
+            <a href="#" class="block px-4 py-4 text-gray-800 hover:text-[#05A7A7]">Acerca de</a>
+            <a href="#" class="block px-4 py-4 text-gray-800 hover:text-[#05A7A7]">Contactos</a>
+            <a href="#" class="px-4 py-2 rounded border-2 border-[#05A7A7] text-white bg-[#05A7A7] hover:bg-white hover:text-black hover:border-[#05A7A7] transition-colors duration-300">Descargas</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+        document.getElementById("mobile-menu-container").classList.toggle("hidden");
+    });
+
+    document.getElementById("menu-close").addEventListener("click", function () {
+        document.getElementById("mobile-menu-container").classList.add("hidden");
+    });
+</script>
